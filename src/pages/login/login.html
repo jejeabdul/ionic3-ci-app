@@ -1,0 +1,30 @@
+<ion-content padding>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div text-center>
+    <img src="assets/img/icon-elabram.png">
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form [formGroup]="myForm" (ngSubmit)="goLogin(myForm.value)">
+    <ion-item>
+      <img src="assets/icon/login/icon-email.svg" item-left style="width:25px; height:25px;">
+      <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <img src="assets/icon/login/password-member.svg" item-left style="width:35px; height:35px;">
+      <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <button ion-button block color="primary" [disabled]="!myForm.valid">Log In</button>
+    <br>
+    <div text-center>
+      <a (click)="goForgotPassword();">Forgot Password?</a>
+    </div>
+  </form>
+</ion-content>
